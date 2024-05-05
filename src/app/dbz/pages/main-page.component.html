@@ -5,7 +5,8 @@
 <div class="row">
   <div class="col">
 
-    <dbz-list></dbz-list>
+    <!-- Dado que declaramos el atributo characterLsit como @Input(), podemos asignar valores del componente padre si los arrays[] son del mismo tipo -->
+    <dbz-list [characterList]="characters"></dbz-list>
 
   </div>
 
