@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -16,5 +16,14 @@ export class ListComponent {
     }
   ];//El contenido de este atributo perderá su valor y adoptará el que llega de Input si se asigna ese decorador en el html
 
-  
+  @Output()//nos permite inyectar un valor de un componente hijo hacia un componente padre
+  public onDelete: EventEmitter<number> = new EventEmitter();
+
+  public onDeleteCharacter(index: number): void {
+    console.log({index});
+    //al hacer emit, podemos enviar este valor al componente padre
+    this.onDelete.emit(index);
+
+  }
+
 }

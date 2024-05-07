@@ -6,7 +6,7 @@
   <div class="col">
 
     <!-- Dado que declaramos el atributo characterLsit como @Input(), podemos asignar valores del componente padre si los arrays[] son del mismo tipo -->
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
 
   </div>
 
