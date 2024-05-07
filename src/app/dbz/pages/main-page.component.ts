@@ -21,5 +21,12 @@ export class MainPageComponent {
     }
   ];
 
+  public onNewCharacter(character: Character) : void {
+    console.log('MainPage');
+    console.log(character);
+    //this.characters.unshift(character);// .unshift es como .add pero agrega el elemento al principio del arreglo.
+    this.characters.push(character); //.push es lo mismo que .add en Java. Agrega el elemento al final
+  };
+
 
 }

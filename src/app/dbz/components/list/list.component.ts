@@ -16,4 +16,5 @@ export class ListComponent {
     }
   ];//El contenido de este atributo perderá su valor y adoptará el que llega de Input si se asigna ese decorador en el html
 
+  
 }
