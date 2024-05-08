@@ -9,7 +9,7 @@ export class MainPageComponent {
 
   //inyectar service
   constructor(public dbzService: DbzService) {
-    
+
   }
 
 }
