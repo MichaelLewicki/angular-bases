@@ -26,8 +26,11 @@ export class ListComponent {
 
   }
 
-  public onDeleteCharacterById(id: string | undefined): void {
+  public onDeleteCharacterById(id?: string): void {
     console.log(id);
+    if (!id) {
+      return;
+    };
     this.onDelete.emit(id);
   }
 
